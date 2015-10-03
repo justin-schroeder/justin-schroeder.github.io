@@ -64,7 +64,7 @@
             var links = document.querySelectorAll("a");
             for (var i in links) {
                 links[i].ontouchstart = function () {
-                    alert('touched!');
+                    window.location = links[i].getAttribute('href');
                 }
             }
         </script>
