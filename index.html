@@ -60,5 +60,13 @@
             var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
           })();
         </script>
+        <script type="text/javascript">
+            var links = document.querySelectorAll("a");
+            for (var i in links) {
+                links[i].ontouchstart = function () {
+                    alert('touched!');
+                }
+            }
+        </script>
     </body>
 </html>
