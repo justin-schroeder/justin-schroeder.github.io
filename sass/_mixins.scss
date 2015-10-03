@@ -1,0 +1,12 @@
+@mixin bp($value, $prop : max-width) {
+  @if ($value == "retina") {
+    @media (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dppx) {
+      @content;
+    }
+  }
+  @else {
+    @media only screen and (#{$prop}: $value) {
+      @content;
+    }
+  }
+}
