@@ -1,8 +1,7 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-@import "compass";
+/**
+ * @file main.scss
+ */
+
 @import "mixins";
 
 ::-moz-selection { background: rgba(255,127,80,.4); }
@@ -27,7 +26,6 @@ p {
     margin: 0 0 1em 0;
     max-width: 20em;
     margin: 0 auto;
-    // @include text-shadow(0px 0px 1px #676767);
 }
 
 h1 {
@@ -53,7 +51,6 @@ a {
     text-decoration: none;
     display: inline-block;
     position: relative;
-    @include text-shadow(none);
     &:after {
         content: " ";
         height: 1px;
@@ -63,7 +60,7 @@ a {
         position: absolute;
         bottom: 0;
         right: 0;
-        @include transition(width .3s);
+        transition: width .3s;
     }
     &:hover {
         &:after {
@@ -110,27 +107,27 @@ a {
     top: 50%;
     padding: 0 1em;
     box-sizing:border-box;
-    @include backface-visibility(hidden);
+    backface-visibility: hidden;
     .js & {
         opacity: 0;
-        @include transform(translateY(-47%) scale(.98));
+        transform: translateY(-47%) scale(.98);
     }
     .js.show.wf-active &, .js.show.wf-failed & {
         opacity: 1;
-        @include transform(translateY(-50%) scale(1));
+        transform: translateY(-50%) scale(1);
     }
-    @include translateY(-50%);
-    @include transition(all .5s);
+    transform: translateY(-50%);
+    transition: all .5s;
 
     @include bp(550px){
         top: 10%;
         .js & {
-            @include transform(translateY(-2%) scale(.98));
+            transform: translateY(-2%) scale(.98);
         }
         .js.show.wf-active &, .js.show.wf-failed & {
-            @include transform(translateY(-5%) scale(1));
+            transform: translateY(-5%) scale(1);
         }
-        @include translateY(-5%);
+        transform: translateY(-5%);
     }
 }
 
