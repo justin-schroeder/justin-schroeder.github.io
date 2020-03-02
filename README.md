@@ -1,7 +1,7 @@
 # Justin Schroeder
 
-To deploy run:
+The primary branch is `master-build` deploy run:
 
 ```sh
-git subtree push --prefix public origin gh-pages
+git subtree push --prefix public master
 ```
