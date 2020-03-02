@@ -3,5 +3,5 @@
 The primary branch is `master-build` deploy run:
 
 ```sh
-git subtree push --prefix public master
+git subtree push --prefix public origin master
 ```
